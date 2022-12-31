@@ -6,6 +6,7 @@ import displayButtons from "./displayButtons.js";
 const title = document.querySelector(".section-title h1");
 const init = async () => {
   const followers = fetchFollowers();
+  console.log(followers);
   displayFollowers(followers);
   title.textContent = "Pagination";
 };
