@@ -5,10 +5,10 @@ import displayButtons from "./displayButtons.js";
 
 const title = document.querySelector(".section-title h1");
 const init = async () => {
-  const followers = fetchFollowers();
-  console.log(followers);
+  const followers = await fetchFollowers();
   displayFollowers(followers);
   title.textContent = "Pagination";
+  paginate(followers);
 };
 
 window.addEventListener("load", init);
